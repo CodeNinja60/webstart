@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebStart | Biznesingiz uchun saytlar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>WebStart</h2>
+        <nav>
+            <a href="#xizmatlar">Xizmatlar</a>
+            <a href="#narxlar">Narxlar</a>
+            <a href="#aloqa">Aloqa</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Biznesingiz uchun zamonaviy saytlar</h1>
+        <p>
+            G‘oyangizni internetga olib chiqing.
+            Biznesingiz uchun chiroyli va qulay sayt yarating.
+        </p>
+        <a class="button" href="#aloqa">Buyurtma berish</a>
+    </main>
+
+    <section id="xizmatlar">
+    <h2>Bizning xizmatlarimiz</h2>
+    <p>Biznesingiz uchun kerakli yechimni tanlang.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Biznes sayti</h3>
+            <p>Kompaniyangiz va xizmatlaringizni internetda tanishtiring.</p>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio</h3>
+            <p>Ishlaringiz, tajribangiz va mahoratingizni namoyish eting.</p>
+        </div>
+
+        <div class="card">
+            <h3>Internet-do‘kon</h3>
+            <p>Mahsulotlaringizni internet orqali mijozlarga ko‘rsating.</p>
+        </div>
+
+    </div>
+</section>
+
+    <section id="aloqa">
+    <h2>Biz bilan bog‘laning</h2>
+
+    <p>
+        Biznesingiz uchun sayt kerakmi?
+        Bizga xabar yuboring!
+    </p>
+
+    <div class="contact-box">
+        <input type="text" placeholder="Ismingiz">
+        <input type="email" placeholder="Email manzilingiz">
+        <textarea placeholder="Qanday sayt kerak?"></textarea>
+
+        <button onclick="xabarYuborish()">
+            Xabar yuborish
+        </button>
+    </div>
+</section>
+<script>
+function xabarYuborish() {
+    const ism = document.querySelector(
+        '.contact-box input[type="text"]'
+    ).value;
+
+    const email = document.querySelector(
+        '.contact-box input[type="email"]'
+    ).value;
+
+    const xabar = document.querySelector(
+        '.contact-box textarea'
+    ).value;
+
+    if (ism === "" || email === "" || xabar === "") {
+        alert("Iltimos, barcha maydonlarni to‘ldiring!");
+        return;
+    }
+
+    alert("Rahmat, " + ism + "! Xabaringiz tayyor.");
+}
+<section id="narxlar">
+    <h2>Bizning tariflarimiz</h2>
+    <p>O‘zingizga mos xizmatni tanlang.</p>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Starter</h3>
+            <h2>$20</h2>
+            <p>Oddiy biznes sayti</p>
+            <p>Mobil qurilmalarga mos</p>
+            <p>Chiroyli dizayn</p>
+        </div>
+
+        <div class="card">
+            <h3>Professional</h3>
+            <h2>$50</h2>
+            <p>Kengaytirilgan biznes sayti</p>
+            <p>Maxsus dizayn</p>
+            <p>Qo‘shimcha funksiyalar</p>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <h2>$100</h2>
+            <p>Ko‘p sahifali sayt</p>
+            <p>Internet-do‘kon imkoniyatlari</p>
+            <p>Kengaytirilgan funksiyalar</p>
+        </div>
+
+    </div>
+</section>
+</script>
+</body>
+</html>
